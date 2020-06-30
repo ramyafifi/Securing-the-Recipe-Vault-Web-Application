@@ -1,0 +1,25 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+
+Use CloudFront CDN to secure and accelerate access to data.
+Use Systems Manager to help maintain security and compliance by scanning instances against patch, configuration, and custom policies. you can define patch baselines, maintain up-to-date anti-virus definitions, and enforce firewall policies. you can also remotely manage your servers at scale without manually logging in to each server. 
+
+
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+
+With insecure IAM permissions for the S3 bucket, using VPC Private Endpoints would not prevent the unauthorized access to the secret bucket. 
+
+
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+
+When you enable S3 Bucket Encryption, it does not affect existing objects in your bucket
+Therefore, it may be wise to enable encryption prior uploading any files on your S3 bucket
+
+
+
+# What would happen if the original cloud formation templates are applied to this environment.
+
+Without updating the original CloudFormation templates with any necessary changes/fixes, applying them would result in reverting back to the original security settings.
+

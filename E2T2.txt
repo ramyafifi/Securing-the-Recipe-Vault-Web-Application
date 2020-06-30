@@ -1,0 +1,23 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+
+AttackInstanceSG
+4.1 - Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+
+WebAppSG
+4.1 - Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+4.2 - Ensure no security groups allow ingress from 0.0.0.0 to port 3389
+
+Default
+4.3 - Ensure the default security groups of every VPC restricts all traffic
+
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+4.1 - Modify the inbound rule for each security group to ONLY allow ingress from Trusted Sources. 
+
+4.2 - Modify the inbound rule for each security group to ONLY allow ingress from Trusted Sources
+
+4.3 - Delete ALL Inbound/Outbound rules from the default security group. Add the required rules to other security groups attached to the VPC
+

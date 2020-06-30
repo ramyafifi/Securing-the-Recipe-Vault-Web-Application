@@ -1,0 +1,8 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+All S3 buckets have Block Public Access disabled and Server-Side Encryption disabled. Not a good security practice as it could allow unauthorized users to have access to the data and view the file contents within the S3 buckets.
+
+# Poor practice 2
+The Network ACLs applied to the VPC Subnets allow all types of traffic on any port from any source. This may cause security compromises and increase the ability for attackers to perform malicious attacks against the infrastructure. These rules should be used to minimize the surface attack as much as possible.
+

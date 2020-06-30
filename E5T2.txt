@@ -1,0 +1,28 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+CFripper is a static code analysis tool for CloudFormation scripts
+
+
+### Example vulnerability
+EC2SecurityGroupMissingEgressRule 
+--> this indicates that all outbound traffic is allowed due to missing Egress Rule
+
+
+##Scan AMI’s or containers for OS vulnerabilities
+Anchore is a tool used to discover vulnerabilities in operating system or programming language packages before publishing container images 
+
+
+### Example vulnerability
+GHSA-grmf-4fq6-2r79 
+--> GHSA is flagging a Mercurial Python package
+
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+AWS Config service is used to evaluate your AWS resources config
+
+
+### Example vulnerability
+s3-bucket-server-side-encryption-enabled
+https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-server-side-encryption-enabled.html
+--> Checks that your Amazon S3 bucket either has Amazon S3 default encryption enabled or that the S3 bucket policy explicitly denies put-object requests without server side encryption. 
